@@ -1,3 +1,1 @@
-# CachePerformanceTest
-# CachePerformanceTest
 # redisgraphCachePerformance
