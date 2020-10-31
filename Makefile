@@ -23,6 +23,10 @@ checkfmt:
 	fi && \
 	exit $$EXIT_CODE
 
+lint:
+	$(GOGET) github.com/golangci/golangci-lint/cmd/golangci-lint
+	golangci-lint run
+
 get:
 	$(GOGET) -t -v ./...
 
@@ -32,14 +36,6 @@ test: get
 
 coverage: get test
 	$(GOTEST) -race -coverprofile=coverage.txt -covermode=atomic .
-
-
-release:
-	$(GOGET) github.com/mitchellh/gox
-	$(GOGET) github.com/tcnksm/ghr
-	GO111MODULE=on gox  -osarch "linux/amd64 darwin/amd64" -output "dist/redistimeseries-ooo-benchmark_{{.OS}}_{{.Arch}}" .
-	aws s3 cp dist/redistimeseries-ooo-benchmark_darwin_amd64 s3://benchmarks.redislabs/redistimeseries/tools/redistimeseries-ooo-benchmark/ --acl=public-read
-	aws s3 cp dist/redistimeseries-ooo-benchmark_linux_amd64 s3://benchmarks.redislabs/redistimeseries/tools/redistimeseries-ooo-benchmark/ --acl=public-read
 
 fmt:
 	$(GOFMT) ./...
