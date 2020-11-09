@@ -60,11 +60,11 @@ func graphNodesRoutine(addr, socket string, pipelineSize int, clientName, graphN
 		if rand_num < hit_rate {
 			// To acheive cache hit with high probability, we execute one of the reccurent queries.
 			hit_id := rand.Intn(reccurent_queries_num)
-			cypher = fmt.Sprintf("MATCH (a:person {ID_hit:%d})-[:friend|:visited*]->(e) RETURN e.name, count(e.name) AS NumPathsToEntity ORDER BY NumPathsToEntity, e.name DESC", 0)
+			cypher = fmt.Sprintf("MATCH (a:person {ID_hit:%d})-[:friend|:visited*]->(e) RETURN e.name, count(e.name) AS NumPathsToEntity ORDER BY NumPathsToEntity, e.name DESC", hit_id)
 		} else {
 			// To acheive cache miss, we execute a new command
 			curr_insert += clients
-			cypher = fmt.Sprintf("MATCH (a:person {ID_hit:%d})-[:friend|:visited*]->(e) RETURN e.name, count(e.name) AS NumPathsToEntity ORDER BY NumPathsToEntity, e.name DESC", curr_insert)
+			cypher = fmt.Sprintf("MATCH (a:person {ID:%d})-[:friend|:visited*]->(e) RETURN e.name, count(e.name) AS NumPathsToEntity ORDER BY NumPathsToEntity, e.name DESC", curr_insert)
 		}
 		
 		startT := time.Now()
