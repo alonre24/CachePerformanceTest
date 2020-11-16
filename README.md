@@ -16,7 +16,7 @@ while RedisGraph is running in the background with CACHE_SIZE is 25.
 
 **clients:** Number of concurrent clients (default is 20). The commands are split equally between the clients.
 
-**hit_rate:** Expected cache hit rate.
+**hit_rate:** Expected cache hit rate (default is 0.9).
 
 Output includes Average throughput (in commands per second) and server's memory usage (in MB), along with the actual hit rate and a csv file calles AvgServerLatency.csv which indicates the average latency reported by the server (in NanoSeconds) over time.  
 
