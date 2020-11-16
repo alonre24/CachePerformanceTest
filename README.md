@@ -6,7 +6,7 @@ For running this benchmark, use the command:
 ```
 go run performance.go [-host host] [-total_commands total_commands] [-clients clients] [-hit_rate hit_rate]
 ```
-while RedisGraph is running in the background with CACHE_SIZE is 25.
+while RedisGraph is running in the background with CACHE_SIZE=25.
 
 **_argumetns:_**
 
