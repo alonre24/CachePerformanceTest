@@ -22,6 +22,8 @@ github.com/OpenPeeDeeP/depguard v1.0.1/go.mod h1:xsIw86fROiiwelg+jB2uM9PiKihMMmU
 github.com/RedisGraph/redisgraph-go v1.0.0 h1:gs5MK1eApH5kUbBURNFaW3J0C6OT+tgV5+4y3jJZWzQ=
 github.com/RedisGraph/redisgraph-go v1.0.1-0.20201102181107-797f3800e9ba h1:frOr4GLpCt5lnnM2yNmQAwmc1Ez8S7KYRaTDXv09qJY=
 github.com/RedisGraph/redisgraph-go v1.0.1-0.20201102181107-797f3800e9ba/go.mod h1:U2/4ZILEyET5BMJvt3s0fiTlxTvpm9rJNpjQo73sn2c=
+github.com/RedisGraph/redisgraph-go v1.0.1-0.20201110103741-82eddfa71249 h1:c64/jeUqpmm7I0w7mtcqPjAY2m/ycnH2EPKCqS1fI+M=
+github.com/RedisGraph/redisgraph-go v1.0.1-0.20201110103741-82eddfa71249/go.mod h1:U2/4ZILEyET5BMJvt3s0fiTlxTvpm9rJNpjQo73sn2c=
 github.com/RedisGraph/redisgraph-go v2.0.2+incompatible h1:wl+1qbM0l1OqUmfV4D3JxHnfb6VWyxR+lKdAjL7pBVc=
 github.com/RedisGraph/redisgraph-go v2.0.2+incompatible/go.mod h1:jVOxdR3259KmqR1VBYmphd7pIcdqP1LtXGVAlMTx8ag=
 github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6/go.mod h1:3eOhrUMpNV+6aFIbp5/iudMxNCF27Vw2OZgy4xEx0Fg=
